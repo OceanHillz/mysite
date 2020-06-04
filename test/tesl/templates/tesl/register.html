@@ -1,0 +1,31 @@
+{% extends 'tesl/base.html' %}
+
+{% block title %}
+Login
+{% endblock title %}
+
+{% block content %}
+<div class="text-center">
+  <h1>Register</h1>
+  <h4><em>...Find happiness and laughter with TeslohgTV...</em></h4>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="card text-center bg-dark col-sm-4 offset-sm-4">
+        <div class="card-header text-light bg-dark">
+          <h2>TeslohgTV</h2>
+        <div class="card-body">
+          <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="card-footer text-muted">
+              <input type="submit" class="btn btn-primary" name="" value="Register">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
